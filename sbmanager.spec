@@ -9,6 +9,14 @@ Source0:	%{name}.tar.bz2
 URL:		http://www.libimobiledevice.org/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake
+BuildRequires:	clutter-devel
+BuildRequires:	clutter-gtk-devel
+BuildRequires:	gettext-devel
+BuildRequires:	glib2-devel
+BuildRequires:	intltool
+BuildRequires:	libimobiledevice-devel
+BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
