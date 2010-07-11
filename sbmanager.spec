@@ -1,6 +1,6 @@
 Summary:	Manage iPhone/iPod Touch SpringBoard icons from the computer
 Name:		sbmanager
-Version:	0.1
+Version:	0.1.0
 Release:	0.1
 License:	GPL v2
 Group:		X11/Applications
@@ -9,14 +9,17 @@ Source0:	%{name}.tar.bz2
 URL:		http://www.libimobiledevice.org/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake
-BuildRequires:	clutter-devel
-BuildRequires:	clutter-gtk-devel
+BuildRequires:	clutter-devel >= 1.0.6
+BuildRequires:	clutter-gtk-devel >= 0.10
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel
+BuildRequires:	glib2-devel >= 1:2.14.1
+BuildRequires:	gtk+2-devel >= 2:2.16
 BuildRequires:	intltool
-BuildRequires:	libimobiledevice-devel
+BuildRequires:	libimobiledevice-devel >= 0.9.7
+BuildRequires:	libplist-devel >= 1.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+BuildConflicts:	Mesa-libGL-devel < 7.8.1-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
