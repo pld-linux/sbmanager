@@ -11,7 +11,7 @@ BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake
 BuildRequires:	clutter-devel >= 1.0.6
 BuildRequires:	clutter-gtk-devel >= 0.10
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.14.1
 BuildRequires:	gtk+2-devel >= 2:2.16
 BuildRequires:	intltool
