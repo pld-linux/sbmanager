@@ -1,0 +1,29 @@
+--- sbmanager-0.1.8/configure.ac~	2016-09-17 10:01:43.000000000 +0300
++++ sbmanager-0.1.8/configure.ac	2016-09-17 10:02:36.356737410 +0300
+@@ -16,25 +16,11 @@
+ AC_PROG_LIBTOOL
+ 
+ # Checks for libraries.
+-# PKG_CHECK_MODULES(libimobiledevice, libimobiledevice-1.0 = 0.9.7)
+-# PKG_CHECK_MODULES(libimobiledevice10, libimobiledevice-1.0 = 1.0.0, libimobiledevice_1_0=yes, libimobiledevice_1_0=no)
+-# if test x"$libimobiledevice_1_0" = xyes; then
+-# AC_DEFINE([HAVE_LIBIMOBILEDEVICE_1_0], 1, [Define if libimobiledevice is using 1.0.0 API])
+-# fi
+-# PKG_CHECK_MODULES(libimobiledevice11, libimobiledevice-1.0 = 1.1.0, libimobiledevice_1_1=yes, libimobiledevice_1_1=no)
+-# if test x"$libimobiledevice_1_1" = xyes; then
+-# AC_DEFINE([HAVE_LIBIMOBILEDEVICE_1_1], 1, [Define if libimobiledevice is using 1.1.0 API])
+-# fi
+-# FIX ME remove AC_define from code as no longer needed 
+-PKG_CHECK_MODULES(libimobiledevice, libimobiledevice10 >= 1.2.0)
+-# if test x"$libimobiledevice_1_0" = xyes; then
+-# AC_DEFINE([HAVE_LIBIMOBILEDEVICE_1_1_5], 1, [Define if libimobiledevice is using 1.1.5 API])
+-# fi
+ 
+ # pkg-config --???? module (library name) to check version number
+ # pkg-config --exists module (library name) to check module availablity
+ 
+-
++PKG_CHECK_MODULES(libimobiledevice, libimobiledevice-1.0 >= 1.2.0)
+ PKG_CHECK_MODULES(libglib, glib-2.0 >= 1.0.0)
+ PKG_CHECK_MODULES(libgthread2, gthread-2.0 >= 2.14.1)
+ PKG_CHECK_MODULES(libplist, libplist >= 1.0)

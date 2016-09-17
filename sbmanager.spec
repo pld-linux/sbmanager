@@ -1,11 +1,12 @@
 Summary:	Manage iPhone/iPod Touch SpringBoard icons from the computer
 Name:		sbmanager
-Version:	0.1.0
-Release:	0.2
+Version:	0.1.8
+Release:	0.3
 License:	GPL v2
 Group:		X11/Applications
-Source0:	https://github.com/libimobiledevice/sbmanager/archive/1dee1087/%{name}-%{version}.tar.gz
-# Source0-md5:	8a9bb02b9f78843ab98038cb5e213732
+Source0:	https://github.com/gitsop01/sbmanager/archive/f9ed226b/%{name}-%{version}.tar.gz
+# Source0-md5:	c88829b79f434d465aae806392534c93
+Patch0:		pkg-config.patch
 URL:		https://github.com/libimobiledevice/sbmanager
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake
@@ -31,6 +32,7 @@ any iPhone/iPod Touch device running firmware 3.1 or later.
 %setup -qc
 mv sbmanager-*/* .
 %{__sed} -i -e s/-Werror// configure.ac
+%patch0 -p1
 
 %build
 %{__aclocal} -I m4
@@ -61,3 +63,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/sbmanager
 %{_datadir}/sbmanager/background.png
 %{_datadir}/sbmanager/dot.png
+%{_datadir}/sbmanager/folder.png
+%{_datadir}/sbmanager/foldermarker.png
+%{_datadir}/sbmanager/iconshadow.png
