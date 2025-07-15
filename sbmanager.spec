@@ -32,7 +32,7 @@ any iPhone/iPod Touch device running firmware 3.1 or later.
 %setup -qc
 mv sbmanager-*/* .
 %{__sed} -i -e s/-Werror// configure.ac
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__aclocal} -I m4
